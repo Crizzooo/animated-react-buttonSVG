@@ -3,12 +3,6 @@ body {
   font-size: 12px;
 }
 
-.links {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-}
-
 .buttonHolder {
   opacity: 1;
   transform: translateY(0px) scale(1);
@@ -32,12 +26,8 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-  stroke-width: 1;
-  fill: none;
-  fill-rule: evenodd;
-  stroke: pink;
 }
 
 .buttonSVGPath {
-  transform-origin: 50% 50%;
+  // transform-origin: 50% 50%;
 }
