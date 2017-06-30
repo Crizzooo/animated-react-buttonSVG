@@ -40,7 +40,7 @@ export default class Button extends Component {
     font size    - buttonTextStyle, buttonHoverTextStyle
     font content - buttonText                          X
     custom path  - path, animatedPath                  X
-    cusotmAnimations
+    cusotmAnimations - pathAnimationProps, textAnimationProps
     additionalButtonProps
     additionalTextProps
     animatedButtonProps
@@ -55,6 +55,7 @@ export default class Button extends Component {
     }
 
     render() {
+        console.log('this.props', this.props);
         return (this.state.inButton) ? this.renderHover() : this.renderNormal();
     }
 
@@ -70,6 +71,7 @@ export default class Button extends Component {
                     d={this.animatedPath}
                     elasticity="700"
                     offset="0"
+                    {...this.props.pathAnimationProps}
                     >
                         <path
                             className="buttonSVGPath"
@@ -81,7 +83,8 @@ export default class Button extends Component {
                 <Anime
                     scale="1.15"
                     duration="800"
-                    offset="0">
+                    offset="0"
+                    {...this.props.textAnimationProps}>
                     <div style={{"zIndex":"1000"}}>{this.buttonText}</div>
                 </Anime>
             </a>

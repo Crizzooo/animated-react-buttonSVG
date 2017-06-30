@@ -10,6 +10,11 @@ const App = () => (
     fillRule="nonzero"
     buttonText="test"
     width="360"
+    pathAnimationProps={{
+      "elasticity":"100",
+      "translateX":"2",
+      "translateY":"2"
+    }}
     />
   </div>
 );
