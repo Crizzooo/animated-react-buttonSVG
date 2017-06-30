@@ -18,7 +18,7 @@ export default class Button extends Component {
             strokeWidth: props.strokeWidth || 1,
             stroke: props.strokeColor || 'green',
             fill: props.fill || 'none',
-            fillRule: props.fillRule || 'evenodd'
+            fillRule: props.fillRule || 'evenodd',
         }
 
         // Default width is 180, best height is 1/3;
@@ -42,10 +42,9 @@ export default class Button extends Component {
     custom path  - path, animatedPath                  X
     cusotmAnimations - pathAnimationProps, textAnimationProps X
     textStyle, textClassName
-    additionalButtonProps
-    additionalTextProps
-    animatedButtonProps
-    animatedTextProps
+        textStyle is on both normal and hover text     X
+        hoverTextClassName                             X
+        normalTextClassName                            X
     */
     onMouseEnter(evt) {
       this.setState({inButton: true});
@@ -57,8 +56,7 @@ export default class Button extends Component {
 
     render() {
         console.log('this.props', this.props);
-        // return (this.state.inButton) ? this.renderHover() : this.renderNormal();
-        return this.renderHover();
+        return (this.state.inButton) ? this.renderHover() : this.renderNormal();
     }
 
     renderHover() {
@@ -68,7 +66,7 @@ export default class Button extends Component {
                onMouseLeave={ this.onMouseLeave }
                style={{"width": this.width, "height": this.height}}
                 >
-                <svg viewBox={`0 0 ${this.width} ${this.height}`} className="buttonSVG" style={this.pathStyle}>
+                <svg viewBox={`0 0 ${this.width} ${this.height}`} className="buttonSVG" style={{...this.pathStyle}} {...this.props.additionalButtonProps}>
                     <Anime
                     d={this.animatedPath}
                     elasticity="700"
@@ -88,7 +86,7 @@ export default class Button extends Component {
                     offset="0"
                     {...this.props.textAnimationProps}
                 >
-                    <div style={{"zIndex":"1000", "color":"pink"}}>{this.buttonText}</div>
+                    <div style={{"zIndex":"1000", ...this.props.textStyle}} className={this.props.hoverTextClassName}>{this.buttonText}</div>
                 </Anime>
             </a>
         );
@@ -101,14 +99,18 @@ export default class Button extends Component {
                onMouseLeave={ this.onMouseLeave }
                style={{"width": this.width, "height": this.height}}
                 >
-                    <svg viewBox={`0 0 ${this.width} ${this.height}`} className="buttonSVG" style={this.pathStyle}>
+                    <svg
+                        viewBox={`0 0 ${this.width} ${this.height}`}
+                        className="buttonSVG" style={this.pathStyle}
+                        {...this.props.buttonStyle}>
                             <path
                                 className="buttonSVGPath"
                                 d={this.path}
                                 >
                             </path>
                     </svg>
-                    <div style={{"zIndex":"1000"}}>{this.buttonText}</div>
+                    <div style={{"zIndex":"1000", ...this.props.textStyle}}
+                        className={this.props.normalTextClassName}>{this.buttonText}</div>
             </a>
         );
     }

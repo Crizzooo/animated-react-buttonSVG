@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from './components/animatedButton';
+import './appStyle.scss';
 
 const App = () => (
   <div>
@@ -11,15 +12,20 @@ const App = () => (
     buttonText="test"
     width="360"
     pathAnimationProps={{
-      "elasticity":"100",
+      "elasticity":"600",
       "translateX":"2",
-      "translateY":"2"
+      "translateY":"2",
+      "duration":"3000"
     }}
     textAnimationProps={{
       "duration":"3000",
       "scale":"3",
-      "translateX":"50"
+      "translateX":"50",
+      "elasticity":"100"
     }}
+    hoverTextClassName="textStyle"
+    textStyle={{"color":"blue"}}
+    filter="dropShadow(-5px -5px -5px #000)"
     />
   </div>
 );
