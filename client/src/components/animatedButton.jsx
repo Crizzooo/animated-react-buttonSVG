@@ -40,7 +40,8 @@ export default class Button extends Component {
     font size    - buttonTextStyle, buttonHoverTextStyle
     font content - buttonText                          X
     custom path  - path, animatedPath                  X
-    cusotmAnimations - pathAnimationProps, textAnimationProps
+    cusotmAnimations - pathAnimationProps, textAnimationProps X
+    textStyle, textClassName
     additionalButtonProps
     additionalTextProps
     animatedButtonProps
@@ -56,7 +57,8 @@ export default class Button extends Component {
 
     render() {
         console.log('this.props', this.props);
-        return (this.state.inButton) ? this.renderHover() : this.renderNormal();
+        // return (this.state.inButton) ? this.renderHover() : this.renderNormal();
+        return this.renderHover();
     }
 
     renderHover() {
@@ -84,8 +86,9 @@ export default class Button extends Component {
                     scale="1.15"
                     duration="800"
                     offset="0"
-                    {...this.props.textAnimationProps}>
-                    <div style={{"zIndex":"1000"}}>{this.buttonText}</div>
+                    {...this.props.textAnimationProps}
+                >
+                    <div style={{"zIndex":"1000", "color":"pink"}}>{this.buttonText}</div>
                 </Anime>
             </a>
         );

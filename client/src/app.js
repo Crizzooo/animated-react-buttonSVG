@@ -15,6 +15,11 @@ const App = () => (
       "translateX":"2",
       "translateY":"2"
     }}
+    textAnimationProps={{
+      "duration":"3000",
+      "scale":"3",
+      "translateX":"50"
+    }}
     />
   </div>
 );
