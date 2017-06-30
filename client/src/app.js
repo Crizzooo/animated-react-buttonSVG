@@ -4,7 +4,13 @@ import Button from './components/animatedButton';
 
 const App = () => (
   <div>
-    <Button strokeWidth="2" strokeColor="blue" fill="pink" fillRule="nonzero" />
+    <Button
+    strokeColor="blue"
+    fill="pink"
+    fillRule="nonzero"
+    buttonText="test"
+    width="360"
+    />
   </div>
 );
 
