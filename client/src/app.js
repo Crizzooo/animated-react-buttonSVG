@@ -23,8 +23,7 @@ const App = () => (
       "elasticity":"100"
     }}
     hoverTextClassName="textStyle"
-    textStyle={{"color":"blue"}}
-    filter="dropShadow(-5px -5px -5px #000)"
+    animatedText="hello!"
     />
   </div>
 );
