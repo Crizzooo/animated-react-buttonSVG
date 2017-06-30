@@ -46,7 +46,7 @@ export default class Button extends Component {
         hoverTextClassName                             X
         normalTextClassName                            X
     */
-    onMouseEnter(evt) {
+    onMouseEnter() {
       this.setState({inButton: true});
     }
 
@@ -55,7 +55,6 @@ export default class Button extends Component {
     }
 
     render() {
-        console.log('this.props', this.props);
         return (this.state.inButton) ? this.renderHover() : this.renderNormal();
     }
 

@@ -20,7 +20,6 @@ const App = () => (
     textAnimationProps={{
       "duration":"3000",
       "scale":"3",
-      "translateX":"50",
       "elasticity":"100"
     }}
     hoverTextClassName="textStyle"
