@@ -10,7 +10,6 @@ export default class Button extends Component {
         this.state = {
             inButton: false
         }
-        console.log('im  a constructor prop', props);
 
         this.onMouseEnter = this.onMouseEnter.bind(this);
         this.onMouseLeave = this.onMouseLeave.bind(this);
@@ -25,10 +24,6 @@ export default class Button extends Component {
         // Default width is 180, best height is 1/3;
         this.width = props.width ? +props.width : 180;
         this.height = props.height ? +props.height : +this.width / 3;
-        console.log('props width', props.width);
-        console.log('this width', this.width);
-        console.log('props height', props.height);
-        console.log('this height', this.height);
 
         this.buttonText = props.buttonText || 'Hover Me!';
 
@@ -64,7 +59,6 @@ export default class Button extends Component {
     }
 
     renderHover() {
-        let width = 180;
         return(
             <a className="buttonHolder"
                onMouseEnter={ this.onMouseEnter }
