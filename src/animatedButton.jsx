@@ -15,6 +15,11 @@ export default class Button extends Component {
         this.onMouseLeave = this.onMouseLeave.bind(this);
 
         this.pathStyle = {
+            position: "absolute",
+            left: 0,
+            top: 0,
+            right: 0,
+            bottom: 0,
             strokeWidth: props.strokeWidth || 1,
             stroke: props.strokeColor || 'blue',
             fill: props.fill || 'none',
