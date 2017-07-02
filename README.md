@@ -19,6 +19,7 @@ The following props are exposed on the imported button component, allowing the u
 * animatedText             - if present, this text will overwrite the buttonText when in hover state
 * path                     - pass in a custom SVG path for the normal state
 * animatedPath             - pass in a custom SVG path for the animated state
+* containerStyle           - pass in custom style object to the button's container element
 * pathAnimationProps       - user can pass in their own animation properties to tweak the default animation
 * textAnimationProps       - user can pass in their own animation properties to tweak the default animation
 * additionalButtonProps    - user can pass in their own props to the svg viewbox that holds the button
