@@ -15,7 +15,7 @@ describe('animeButton', () => {
                             hoverTextClassName="hoverText"
                             normalTextClassName="normalText"/>);
     const text = Button.find('.hoverText');
-    expect(text).toBeTruth();
+    expect(text).toBeTruthy();
     expect(text.text()).toBe('hover me!');
   })
 })
