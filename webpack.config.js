@@ -2,10 +2,10 @@ var path = require('path');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
-  entry: './client/src/animatedButton.jsx',
+  entry: './src/animatedButton.jsx',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'client/src/public/dist')
+    path: path.resolve(__dirname, 'dist')
   },
   context: __dirname,
   devtool: 'source-map',
