@@ -87,7 +87,7 @@ export default class Button extends Component {
                     <svg
                         viewBox={`0 0 180 60`}
                         className="buttonSVG" style={this.pathStyle}
-                        {...this.props.buttonStyle}>
+                        {...this.props.additionalButtonProps}>
                             <path
                                 className="buttonSVGPath"
                                 d={this.path}
