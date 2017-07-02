@@ -1,14 +1,14 @@
 {
   "name": "react-anime-button",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "an animated button using SVG paths and react-anime module",
-  "main": "/dist/bundle.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "test": "jest",
     "build": "webpack"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Christopher Rizzo",
+  "license": "MIT",
   "dependencies": {
     "react": "^15.5.4",
     "react-anime": "^0.3.4"
