@@ -10,7 +10,7 @@ module.exports = {
   context: __dirname,
   devtool: 'source-map',
   resolve: {
-  extensions: ['.js', '.jsx', '.json', '*']
+    extensions: ['.js', '.jsx', '.json', '*']
   },
   module: {
     rules: [{
@@ -18,7 +18,7 @@ module.exports = {
       exclude: /(node_modules|bower_components)/,
       loader: 'babel-loader',
       options: {
-        presets: ['react', 'es2015', 'stage-2']
+        presets: ['react', 'es2015', 'stage-0']
       }
     },
     {
