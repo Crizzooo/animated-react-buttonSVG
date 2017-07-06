@@ -5,6 +5,7 @@
   },
   "description": "an animated button using SVG paths and react-anime module",
   "dependencies": {
+    "babel-register": "^6.24.1",
     "react": "^15.5.4",
     "react-anime": "^0.3.4"
   },
@@ -19,6 +20,7 @@
     "cross-env": "3.1.2",
     "css-loader": "^0.28.0",
     "enzyme": "^2.9.1",
+    "jsdom": "^11.1.0",
     "mocha": "^3.4.2",
     "node-sass": "^4.5.2",
     "react-addons-test-utils": "^15.6.0",
@@ -48,7 +50,7 @@
     "url": "https://github.com/Crizzooo/animated-react-buttonSVG"
   },
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register -w",
+    "test": "mocha --watch --compilers js:babel-core/register --compilers jsx:babel-register",
     "build": "webpack"
   },
   "version": "0.1.0"
