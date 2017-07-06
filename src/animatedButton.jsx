@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Anime from 'react-anime';
 
-export default class Button extends Component {
+class Button extends Component {
 
     constructor (props) {
         super(props);
@@ -54,7 +54,7 @@ export default class Button extends Component {
     }
 
     render() {
-        return (this.state.inButton) ? this.renderHover() : this.renderNormal();
+        return this.state.inButton ? (this.renderHover()) : (this.renderNormal());
     }
 
     renderHover() {
@@ -114,3 +114,5 @@ export default class Button extends Component {
         );
     }
 }
+
+export default Button;
