@@ -12,7 +12,6 @@ function copyProps(src, target) {
     .map(prop => Object.getOwnPropertyDescriptor(src, prop));
   Object.defineProperties(target, props);
 }
-console.log('run?');
 global.window = window;
 global.document = window.document;
 global.navigator = {
