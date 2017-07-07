@@ -13,39 +13,16 @@ const { mount } = require('enzyme');
 describe('animeButton', () => {
   it('swaps between normal and hover views', () => {
     // const wrapper = mount(<Button />);
-    console.log(typeof Button);
-    console.log(Button);
-    console.log(ReactTestUtils.isElement(<Button />));
-    const wrapper = ReactTestUtils.renderIntoDocument(<Button />);
-    console.log(ReactTestUtils.isDOMComponent(wrapper));
-    let container = ReactDOM.findDOMNode(wrapper);
+    const wrapper = ReactTestUtils.renderIntoDocument(<Button />); // <-- is Composite Component
+    let container = ReactDOM.findDOMNode(wrapper); // <-- is DOM Component
     expect(container).to.exist;
-
-    // expect(wrapper.find('.normalText')).to.exist;
-    // expect(wrapper.find('.hoverText')).to.exist;
-    //
-    //
-    // let component = wrapper.find('a');
-    // console.log(wrapper.state());
-    // console.log(wrapper.getNode().onMouseEnter());
-    // wrapper.simulate('mouseEnter');
-
-    // const element = renderer.create(<Button/>, {
-    //   createNodeMock: element => ({ nodeType: true})
-    // });
-    // console.log(Button.prototype);
-    // console.log(wrapper);
-    // ReactTestUtils.Simulate.mouseEnter(container);
-    // console.log(wrapper);
-    // const mock = ReactTestUtils.mockComponent(<Button/>);
-    // console.log(mock);
-    // console.log(element.toJSON());
+    expect(wrapper.state.inButton).to.be.false;
+    console.log(ReactTestUtils.findRenderedDOMComponentWithClass(wrapper, 'normalText'));
+    // see normal text?
+    ReactTestUtils.Simulate.mouseEnter(container);
+    expect(wrapper.state.inButton).to.be.true;
+    // see hover text?
+    let elems = ReactTestUtils.findAllInRenderedTree(wrapper, () => true);
+    // findAllInRenderedTree must be a composite component
   })
 })
-// check path or non hover
-// expect to see hoverTextClassName
-
-// simulate hover
-
-// check path or something to back up hover
-// expect to see normalTextClassName

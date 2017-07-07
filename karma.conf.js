@@ -7,6 +7,11 @@ module.exports = function karmaConfig(config) {
       'test/test.js': ['webpack', 'sourcemap']
     },
     reporters: ['progress'],
+    browserConsoleLogOptions: {
+     level: 'log',
+     format: '%b %T: %m',
+     terminal: true
+    },
     port: 9876,  // karma web server port
     colors: true,
     logLevel: config.LOG_INFO,
