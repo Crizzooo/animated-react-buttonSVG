@@ -21,7 +21,22 @@ describe('animeButton', () => {
 
     // Test Hover State & View
     expect(wrapper.state.inButton).to.be.true;
+    //TODO: check that the g tags now exist
     expect(ReactTestUtils.findRenderedDOMComponentWithClass(wrapper, 'hoverText')).to.exist;
     expect(ReactTestUtils.scryRenderedDOMComponentsWithClass(wrapper, 'normalText')).to.have.length(0);
   })
 })
+
+// What else needs to be tested?
+// Snapshot test of default button?
+// Snapshot test of button with custom props?
+
+
+// Check API
+// height, width
+// buttonText, animatedText
+// path, animatedPath
+// container Style background color, check container applied style
+// custom path styles
+// custom text styles
+// Untested: Path Animation Props, Text Animation Props, Additional Button Props
