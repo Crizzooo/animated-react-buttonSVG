@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import ReactTestUtils from 'react-dom/test-utils';
-import Button from '../src/animatedButton.jsx';
+var React = require('react');
+var ReactDOM = require('react-dom');
+var ReactTestUtils = require('react-dom/test-utils');
+var Button = require('../../src/animatedButton.jsx');
 
-import renderer from 'react-test-renderer';
+// var renderer = require('react-test-renderer');
 
 const { expect } = require('chai');
 const { mount } = require('enzyme');
@@ -13,10 +13,13 @@ const { mount } = require('enzyme');
 describe('animeButton', () => {
   it('swaps between normal and hover views', () => {
     // const wrapper = mount(<Button />);
-    console.log(ReactTestUtils.isElement(<Button/>))
-    const wrapper = ReactTestUtils.renderIntoDocument(<Button/>);
+    console.log(typeof Button);
+    console.log(Button);
+    console.log(ReactTestUtils.isElement(<Button />));
+    const wrapper = ReactTestUtils.renderIntoDocument(<Button />);
     console.log(ReactTestUtils.isDOMComponent(wrapper));
     let container = ReactDOM.findDOMNode(wrapper);
+    expect(container).to.exist;
 
     // expect(wrapper.find('.normalText')).to.exist;
     // expect(wrapper.find('.hoverText')).to.exist;
@@ -32,7 +35,7 @@ describe('animeButton', () => {
     // });
     // console.log(Button.prototype);
     // console.log(wrapper);
-    ReactTestUtils.Simulate.mouseEnter(container);
+    // ReactTestUtils.Simulate.mouseEnter(container);
     // console.log(wrapper);
     // const mock = ReactTestUtils.mockComponent(<Button/>);
     // console.log(mock);

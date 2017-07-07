@@ -115,4 +115,4 @@ class Button extends Component {
     }
 }
 
-export default Button;
+module.exports = Button;
