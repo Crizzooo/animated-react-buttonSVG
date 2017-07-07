@@ -28,6 +28,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.3",
     "mocha": "^3.4.2",
+    "mocha-snapshots": "^2.4.1",
     "node-sass": "^4.5.2",
     "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",

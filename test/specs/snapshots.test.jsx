@@ -3,6 +3,8 @@ import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import Button from '../../src/animatedButton.jsx';
 
+require('mocha-snapshots');
+
 describe('<MyComponent />', () => {
   it('should match snapshot', () => {
     const wrapper = shallow(<Button />)

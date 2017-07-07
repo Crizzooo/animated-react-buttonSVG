@@ -2,6 +2,7 @@ var webpack = require('webpack');
 module.exports = function karmaConfig(config) {
   config.set({
     frameworks: ['mocha', 'chai'],
+    plugins: ['karma-mocha', 'karma-chai', 'karma-webpack', 'karma-sourcemap-loader', 'karma-chrome-launcher', 'mocha-snapshots'],
     files: ['test/test.js'],
     preprocessors: {
       'test/test.js': ['webpack', 'sourcemap']
