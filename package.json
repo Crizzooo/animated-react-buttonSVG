@@ -57,7 +57,8 @@
   },
   "scripts": {
     "test": "karma start --single-run --browsers ChromeHeadless karma.conf.js",
-    "build": "webpack"
+    "build": "webpack",
+    "mochaTest": "mocha test/specs/*.mocha.test.jsx"
   },
   "version": "0.1.0"
 }
