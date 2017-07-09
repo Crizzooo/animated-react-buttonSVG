@@ -3,7 +3,7 @@ var path = require('path');
 module.exports = {
   entry: './lib/index.js',
   output: {
-    filename: 'dist/index.js',
+    filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'umd',
     library: 'react-animated-button'
