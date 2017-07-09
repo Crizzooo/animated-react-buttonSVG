@@ -69,6 +69,7 @@ export default class extends Component {
                onMouseLeave={ this.onMouseLeave }
                onClick={ () => this.props.onClick() }
                style={this.containerStyle}
+               href={this.props.href ? this.props.href : ''}
                 >
                 <svg viewBox={`0 0 180 60`} className="buttonSVG" style={this.pathStyle} {...this.props.additionalButtonProps}>
                     <Anime
@@ -103,6 +104,7 @@ export default class extends Component {
                onMouseLeave={ this.onMouseLeave }
                onClick={ () => this.props.onClick() }
                style={this.containerStyle}
+               href={this.props.href ? this.props.href : ''}
                 >
                     <svg
                         viewBox={`0 0 180 60`}

@@ -2167,7 +2167,7 @@ var _class = function (_Component) {
             textAlign: "center",
             width: _this.width,
             height: _this.height,
-            fontSize: props.fontSize || "1em"
+            fontSize: props.fontSize || ".2em"
         }, props.containerStyle);
 
         _this.path = props.path || "M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z";
@@ -2196,6 +2196,8 @@ var _class = function (_Component) {
     }, {
         key: 'renderHover',
         value: function renderHover() {
+            var _this2 = this;
+
             var textStyle = _extends({ 'zIndex': '1000' }, this.props.textStyle);
             return _react2.default.createElement(
                 'a',
@@ -2203,7 +2205,7 @@ var _class = function (_Component) {
                     onMouseEnter: this.onMouseEnter,
                     onMouseLeave: this.onMouseLeave,
                     onClick: function onClick() {
-                        return props.onClick();
+                        return _this2.props.onClick();
                     },
                     style: this.containerStyle
                 },
@@ -2241,13 +2243,15 @@ var _class = function (_Component) {
     }, {
         key: 'renderNormal',
         value: function renderNormal() {
+            var _this3 = this;
+
             return _react2.default.createElement(
                 'a',
                 { className: 'buttonHolder',
                     onMouseEnter: this.onMouseEnter,
                     onMouseLeave: this.onMouseLeave,
                     onClick: function onClick() {
-                        return props.onClick();
+                        return _this3.props.onClick();
                     },
                     style: this.containerStyle
                 },
