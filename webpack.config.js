@@ -1,11 +1,12 @@
 var path = require('path');
-var LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
-  entry: './src/animatedButton.jsx',
+  entry: './lib/index.js',
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: 'dist/index.js',
+    path: path.resolve(__dirname, 'dist'),
+    libraryTarget: 'umd',
+    library: 'react-animated-button'
   },
   context: __dirname,
   devtool: 'source-map',
@@ -30,8 +31,5 @@ module.exports = {
       ]
     }
   ]
-  },
-  plugins: [
-    new LiveReloadPlugin({appendScriptTag: true})
-  ]
+  }
 };

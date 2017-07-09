@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Anime from 'react-anime';
 
-class Button extends Component {
+export default class extends Component {
 
     constructor (props) {
         super(props);
@@ -117,5 +117,3 @@ class Button extends Component {
         );
     }
 }
-
-module.exports = Button;
