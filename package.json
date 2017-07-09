@@ -34,7 +34,7 @@
     "webpack": "^2.4.1"
   },
   "license": "MIT",
-  "main": "src/animatedButton.jsx",
+  "main": "dist/index.js",
   "name": "react-animated-button",
   "keywords": [
     "animation",
@@ -57,7 +57,7 @@
     "build": "webpack",
     "mochaTest": "mocha test/specs/*.mocha.test.jsx"
   },
-  "version": "0.1.11",
+  "version": "0.1.14",
   "bugs": {
     "url": "https://github.com/Crizzooo/animated-react-buttonSVG/issues"
   },

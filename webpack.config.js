@@ -9,7 +9,6 @@ module.exports = {
     library: 'react-animated-button'
   },
   context: __dirname,
-  devtool: 'source-map',
   resolve: {
     extensions: ['.js', '.jsx', '.json', '*']
   },
@@ -21,15 +20,6 @@ module.exports = {
       options: {
         presets: ['react', 'es2015', 'stage-0']
       }
-    },
-    {
-      test: /\.scss$/,
-      use: [
-        'style-loader',
-        'css-loader',
-        'sass-loader'
-      ]
-    }
-  ]
+    }]
   }
 };
