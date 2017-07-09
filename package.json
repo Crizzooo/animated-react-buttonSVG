@@ -1,8 +1,5 @@
 {
-  "author": {
-    "name": "Christopher Rizzo",
-    "email": "crizzodev@gmail.com"
-  },
+  "author": "Christopher Rizzo <crizzodev@gmail.com> (http://www.crizzo.tech)",
   "description": "an animated button using SVG paths and react-anime module",
   "dependencies": {
     "babel-register": "^6.24.1",
@@ -37,8 +34,8 @@
     "webpack": "^2.4.1"
   },
   "license": "MIT",
-  "main": "dist/bundle.js",
-  "name": "react-anime-button",
+  "main": "src/animatedButton.jsx",
+  "name": "react-animated-button",
   "keywords": [
     "animation",
     "anime",
@@ -53,12 +50,19 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Crizzooo/animated-react-buttonSVG"
+    "url": "git+https://github.com/Crizzooo/animated-react-buttonSVG.git"
   },
   "scripts": {
     "test": "karma start --single-run --browsers ChromeHeadless karma.conf.js",
     "build": "webpack",
     "mochaTest": "mocha test/specs/*.mocha.test.jsx"
   },
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "bugs": {
+    "url": "https://github.com/Crizzooo/animated-react-buttonSVG/issues"
+  },
+  "homepage": "https://github.com/Crizzooo/animated-react-buttonSVG#readme",
+  "directories": {
+    "test": "test"
+  }
 }
