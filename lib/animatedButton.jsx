@@ -64,12 +64,11 @@ export default class extends Component {
     renderHover() {
         let textStyle = {'zIndex':'1000', ...this.props.textStyle}
         return(
-            <a className="buttonHolder"
+            <span className="buttonHolder"
                onMouseEnter={ this.onMouseEnter }
                onMouseLeave={ this.onMouseLeave }
-               onClick={ () => this.props.onClick() }
+               onClick={ () => this.props.onClick ? this.props.onClick() : null}
                style={this.containerStyle}
-               href={this.props.href ? this.props.href : ''}
                 >
                 <svg viewBox={`0 0 180 60`} className="buttonSVG" style={this.pathStyle} {...this.props.additionalButtonProps}>
                     <Anime
@@ -93,18 +92,17 @@ export default class extends Component {
                 >
                     <div style={textStyle} className={this.hoverTextClassName}>{this.animatedText || this.buttonText}</div>
                 </Anime>
-            </a>
+            </span>
         );
     }
 
     renderNormal() {
         return(
-            <a className="buttonHolder"
+            <span className="buttonHolder"
                onMouseEnter={ this.onMouseEnter }
                onMouseLeave={ this.onMouseLeave }
-               onClick={ () => this.props.onClick() }
+               onClick={ () => this.props.onClick ? this.props.onClick() : null}
                style={this.containerStyle}
-               href={this.props.href ? this.props.href : ''}
                 >
                     <svg
                         viewBox={`0 0 180 60`}
@@ -118,7 +116,7 @@ export default class extends Component {
                     </svg>
                     <div style={{"zIndex":"1000", ...this.props.textStyle}}
                         className={this.normalTextClassName}>{this.buttonText}</div>
-            </a>
+                </span>
         );
     }
 

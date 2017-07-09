@@ -2200,12 +2200,12 @@ var _class = function (_Component) {
 
             var textStyle = _extends({ 'zIndex': '1000' }, this.props.textStyle);
             return _react2.default.createElement(
-                'a',
+                'span',
                 { className: 'buttonHolder',
                     onMouseEnter: this.onMouseEnter,
                     onMouseLeave: this.onMouseLeave,
                     onClick: function onClick() {
-                        return _this2.props.onClick();
+                        return _this2.props.onClick ? _this2.props.onClick() : null;
                     },
                     style: this.containerStyle
                 },
@@ -2246,12 +2246,12 @@ var _class = function (_Component) {
             var _this3 = this;
 
             return _react2.default.createElement(
-                'a',
+                'span',
                 { className: 'buttonHolder',
                     onMouseEnter: this.onMouseEnter,
                     onMouseLeave: this.onMouseLeave,
                     onClick: function onClick() {
-                        return _this3.props.onClick();
+                        return _this3.props.onClick ? _this3.props.onClick() : null;
                     },
                     style: this.containerStyle
                 },
