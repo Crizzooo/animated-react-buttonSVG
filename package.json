@@ -57,7 +57,7 @@
     "build": "webpack",
     "mochaTest": "mocha test/specs/*.mocha.test.jsx"
   },
-  "version": "0.1.14",
+  "version": "0.2.01",
   "bugs": {
     "url": "https://github.com/Crizzooo/animated-react-buttonSVG/issues"
   },

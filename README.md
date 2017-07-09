@@ -12,6 +12,7 @@ The following props are exposed on the imported button component, allowing the u
 * width                    - given value or 180 by default
 * height                   - Height is not exposed, but is set to be 1/3 of the given width,
                              which will keep the text centered inside the button
+* fontSize                 - container font size, default is 1em
 * textStyle                - apply styling to the text in both button states
 * buttonHoverTextClassName - apply a class of styles to the text in the animated state
 * normalTextClassName      - apply a class of styles to the text in the default state
@@ -23,3 +24,4 @@ The following props are exposed on the imported button component, allowing the u
 * pathAnimationProps       - user can pass in their own animation properties to tweak the default animation
 * textAnimationProps       - user can pass in their own animation properties to tweak the default animation
 * additionalButtonProps    - user can pass in their own props to the svg viewbox that holds the button
+* props.onClick            - button will invoke props.onClick();
